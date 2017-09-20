@@ -3,15 +3,14 @@ Python Retweet Bot
 
 ![alt text](https://img.shields.io/badge/python-3.5-green.svg "Python3.5")
 
-This script retweets all Tweets containing your search term. To limit Twitter requests a savepoint file marks Tweets found before. It's Twitter API v1.1 ready.
+This script retweets all Tweets containing your search term. To limit Twitter
+requests a savepoint file marks Tweets found before. It's Twitter API v1.1 ready. The configuration files are stored as 
+```.yml``` files, and an example ```twitter_config.yml``` file is included for the sake of completeness.
 
 Dependecies:
 -------------
 * Tweepy
-
-```pip install tweepy```
-
-* Or alternatively
+* PyYaml
 
 ```pip install -r requirements.txt```
 
@@ -23,7 +22,8 @@ How to start:
 * Add your Twitter app credentials in the config file
 * (Tune some other options if you like)
 * $ python retweet.py
-* Add this call to your crontab(unix)/task scheduler(windows) (or something similar) to retweet all new tweets regularly
+* It will be killed when you turn off your machine, so either install on a RPi or...
+* Use the Procfile to run it on Heroku
 
 Compatibility
 -------------

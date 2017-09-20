@@ -1,12 +1,6 @@
-config
-
 \.idea/
 
 bin/
-
-search_config.yml
-
-\.lib/
 
 lib/
 
@@ -17,4 +11,5 @@ lib64
 pip-selfcheck\.json
 
 pyvenv\.cfg
-twitter_config.yml
+example_twitter_config.yml
+/last_id_hashtag_c7efb1c0df063624f59b5a2ca022d274
