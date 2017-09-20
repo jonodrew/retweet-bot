@@ -8,10 +8,18 @@ import yaml
 import time
 
 while True:
-    with open("config.yml", "r") as ymlfile:
+    with open("search_config.yml", "r") as ymlfile:
         cfg = yaml.load(ymlfile)
-        twitter_config = cfg['twitter']
         search_settings = cfg['settings']
+    try:
+        with open("twitter_config.yml", "r") as ymlfile:
+            cfg = yaml.load(ymlfile)
+            twitter_config = cfg['twitter']
+    except FileNotFoundError:
+        twitter_config = {}
+        twitter_variables = ['consumer_key', 'consumer_secret', 'access_token', 'access_token_secret']
+        for v in twitter_variables:
+            twitter_config[v] = os.environ[v]
 
     # your hashtag or search query and tweet language (empty = all languages)
     search = search_settings['search_query']

@@ -4,7 +4,7 @@ config
 
 bin/
 
-config\.yml
+search_config.yml
 
 \.lib/
 

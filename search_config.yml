@@ -1,0 +1,5 @@
+settings:
+  search_query: "list:webofweeknotes/weeknoters #weeknotes"
+  # Leave empty for all languages
+  tweet_language:
+  number_of_rt:
