@@ -7,3 +7,13 @@ bin/
 config\.yml
 
 \.lib/
+
+lib/
+
+share/
+
+lib64
+
+pip-selfcheck\.json
+
+pyvenv\.cfg
